@@ -1,0 +1,20 @@
+{
+    "name": "ROS 2 Dev Container",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "humble",
+    "workspaceFolder": "/ws",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-themes",
+                "twxs.cmake",
+                "donjayamanne.python-extension-pack",
+                "eamodio.gitlens",
+                "ms-iot.vscode-ros"
+            ]
+        }
+    },
+    "remoteUser": "dev",
+    "postCreateCommand": "sudo rosdep update && sudo rosdep install --from-paths src --ignore-src -y && sudo chown -R $(whoami) /ws"
+}

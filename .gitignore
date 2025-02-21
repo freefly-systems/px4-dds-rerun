@@ -1,0 +1,73 @@
+# ROS 2 build directories
+build/
+install/
+log/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# C++ artifacts
+*.o
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ROS 2 specific
+.colcon/
+.colcon_cd_root
+COLCON_IGNORE
+
+# Environment files
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Test results
+test-results/
+coverage.xml
+.coverage
+
+# Documentation
+docs/_build/
+doxygen/
+
+# Logs
+*.log 

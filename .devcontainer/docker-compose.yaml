@@ -1,0 +1,22 @@
+services:
+  humble:
+    image: humble-image
+    container_name: humble-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    network_mode: host
+    pid: "host"
+    ipc: "host"
+    stdin_open: true
+    tty: true
+    environment:
+      - DISPLAY=${DISPLAY}
+    env_file: .env
+    volumes:
+      - ../:/ws
+      - /tmp/.X11-unix:/tmp/.X11-unix:cached
+      - /dev/dri:/dev/dri:cached
+    security_opt:
+      - seccomp:unconfined

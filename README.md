@@ -11,7 +11,13 @@ Template for developing a containerized application communicating with PX4 via t
 
 ## Getting started
 
-0. Get the code
+1. Preparations
+
+    a. Set up PX4 on your host computer using the [PX4 docs instructions](https://docs.px4.io/main/en/ros2/user_guide.html#install-px4)
+
+    b. Launch SITL (which starts the uXRCE-DDS client) and build and run the uXRCE-DDS agent on your host computer using the [PX4 docs instructions](https://docs.px4.io/main/en/ros2/user_guide.html#setup-micro-xrce-dds-agent-client)
+
+2. Get the code
 
     ```
     git clone git@github.com:freefly-systems/PX4-ROS-App-Template.git
@@ -20,11 +26,11 @@ Template for developing a containerized application communicating with PX4 via t
     git submodule update --init --recursive
     ```
     
-1. Open VS Code/Cursor and "Reopen in Container" (see pop-up or command palette)
+3. Open VS Code/Cursor and "Reopen in Container" (see pop-up or command palette)
 
     Note: if you don't use these IDEs, simply run `docker-compose up -d`
 
-2. Verify that things are working by running an example
+4. Verify that things are working by running an example
 
     ```
     source /opt/ros/$ROS_DISTRO/setup.bash
@@ -33,7 +39,7 @@ Template for developing a containerized application communicating with PX4 via t
     ros2 launch px4_ros_com sensor_combined_listener.launch.py
     ```
 
-2. Begin developing!
+5. Begin developing!
 
     Note: you can enter the terminal of a running container using `docker exec -it CONTAINER_NAME bash`
 

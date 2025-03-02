@@ -1,7 +1,7 @@
 {
-    "name": "ROS 2 Dev Container",
+    "name": "px4-dds-rerun",
     "dockerComposeFile": "docker-compose.yaml",
-    "service": "humble",
+    "service": "px4-dds-rerun",
     "workspaceFolder": "/ws",
     "customizations": {
         "vscode": {
@@ -10,7 +10,6 @@
                 "ms-vscode.cpptools-themes",
                 "twxs.cmake",
                 "donjayamanne.python-extension-pack",
-                "eamodio.gitlens",
                 "ms-iot.vscode-ros"
             ]
         }

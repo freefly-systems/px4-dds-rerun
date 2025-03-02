@@ -1,7 +1,7 @@
 services:
-  humble:
-    image: humble-image
-    container_name: humble-container
+  px4-dds-rerun:
+    image: px4-dds-rerun
+    container_name: px4-dds-rerun
     build:
       context: .
       dockerfile: Dockerfile

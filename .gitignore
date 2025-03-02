@@ -54,7 +54,6 @@ Thumbs.db
 COLCON_IGNORE
 
 # Environment files
-.env
 .venv
 env/
 venv/

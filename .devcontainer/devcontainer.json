@@ -1,16 +1,17 @@
 {
-    "name": "px4-dds-rerun",
+    "name": "px4-ros-rerun",
     "dockerComposeFile": "docker-compose.yaml",
-    "service": "px4-dds-rerun",
+    "service": "px4-ros-rerun",
     "workspaceFolder": "/ws",
     "customizations": {
         "vscode": {
             "extensions": [
-                "ms-vscode.cpptools",
-                "ms-vscode.cpptools-themes",
-                "twxs.cmake",
+                "ms-iot.vscode-ros",
                 "donjayamanne.python-extension-pack",
-                "ms-iot.vscode-ros"
+                "ms-python.isort",
+                "ms-python.black-formatter",
+                "mhutchie.git-graph",
+                "mechatroner.rainbow-csv",
             ]
         }
     },

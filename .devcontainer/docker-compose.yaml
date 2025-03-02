@@ -1,7 +1,7 @@
 services:
-  px4-dds-rerun:
-    image: px4-dds-rerun
-    container_name: px4-dds-rerun
+  px4-ros-rerun:
+    image: px4-ros-rerun
+    container_name: px4-ros-rerun
     build:
       context: .
       dockerfile: Dockerfile

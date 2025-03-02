@@ -16,7 +16,7 @@
         }
     },
     "remoteUser": "dev",
-    "postCreateCommand": "sudo rosdep update && sudo rosdep install --from-paths src --ignore-src -y && sudo chown -R $(whoami) /ws",
+    "postCreateCommand": "sudo chown -R $(whoami) /ws",
     "mounts": [
         "source=${localEnv:HOME}/.gitconfig,target=/home/dev/.gitconfig,type=bind,consistency=cached"
     ]

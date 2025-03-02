@@ -13,6 +13,7 @@ services:
     tty: true
     environment:
       - DISPLAY=${DISPLAY}
+      - RR_WEBVIEWER_PORT=9090
     env_file: .env
     volumes:
       - ../:/ws

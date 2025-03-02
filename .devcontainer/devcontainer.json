@@ -16,8 +16,5 @@
         }
     },
     "remoteUser": "dev",
-    "postCreateCommand": "sudo chown -R $(whoami) /ws",
-    "mounts": [
-        "source=${localEnv:HOME}/.gitconfig,target=/home/dev/.gitconfig,type=bind,consistency=cached"
-    ]
+    "postCreateCommand": "sudo chown -R $(whoami) /ws"
 }

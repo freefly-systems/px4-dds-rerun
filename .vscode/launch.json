@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ROS: Launch",
+            "type": "ros",
+            "request": "launch",
+            "target": "/ws/src/px4_ros_rerun/launch/px4_ros_rerun_launch.py"
+        }
+    ]
+}

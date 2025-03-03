@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>px4_ros_offboard</name>
+  <version>0.1.0</version>
+  <description>Package for PX4 offboard control with ROS 2</description>
+  <maintainer email="peter@freeflysystems.com">Peter Breuer</maintainer>
+  <license>BSD 3-Clause</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <depend>rclpy</depend>
+  <depend>px4_msgs</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

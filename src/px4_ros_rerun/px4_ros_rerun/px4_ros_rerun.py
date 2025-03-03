@@ -55,9 +55,9 @@ class PX4RerunNode(Node):
         rr.log(
             "world/ground",
             rr.Boxes3D(
-                mins=[-100, -100, -1],
-                sizes=[200, 200, 1],
-                colors=[255, 255, 255],
+                mins=[-10, -10, -1],
+                sizes=[20, 20, 1],
+                colors=[0, 0, 0],
                 fill_mode="solid",
             ),
             static=True,
@@ -68,12 +68,15 @@ class PX4RerunNode(Node):
     def local_pos_callback(self, msg: VehicleLocalPosition):
         if self.limit_fps():
             return
-        rr.log("world/body-frd", rr.components.Translation3D(xyz=[msg.x, msg.y, msg.z]))
+        rr.log("world/body-frd", rr.Transform3D(translation=[msg.x, msg.y, msg.z]))
 
     def att_callback(self, msg: VehicleAttitude):
         if self.limit_fps():
             return
-        rr.log("world/body-frd", rr.RotationQuat(xyzw=list(msg.q)))
+        rr.log(
+            "world/body-frd",
+            rr.Transform3D(rotation=rr.Quaternion(xyzw=msg.q.tolist())),
+        )
 
     def limit_fps(self, fps: int = 60) -> bool:
         now = self.get_clock().now()
